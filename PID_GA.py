@@ -119,12 +119,11 @@ for generation in range(num_generations):
         print("overshoot: ", overshoot)
         print("rise_time: ", rise_time)
         print("settling_time: ", settling_time)
-
         
     for filename, fitness, rmse, overshoot, rise_time, settling_time, individual in fitnesses:
         records.append([generation] + individual.tolist() + [filename, fitness, rmse, overshoot, rise_time, settling_time])
     
-    # election, crossover, and mutation
+    # selection, crossover, mutation
     new_population = []
     while len(new_population) < population_size:
         parent1 = selection(population, fitnesses)
