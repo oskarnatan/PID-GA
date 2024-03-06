@@ -18,7 +18,7 @@ crossover_rate = 0.25
 population = [np.random.rand(3) for _ in range(population_size)]
 
 # setting waktu
-t = np.linspace(0, 100, 100)
+t = np.linspace(0, 10, 1000)
 dt = t[1] - t[0]
 
 
